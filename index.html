@@ -8,7 +8,12 @@
   <style>
     body {
   background-color: black; 
+  animation: fadeIn 1s ease-in-out;
 }
+@keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
 
     .navbar-dark .navbar-brand,
     .navbar-dark .nav-link,
@@ -22,9 +27,19 @@
 
     .navbar-dark .navbar-brand {
       margin-left: 60px;
+      animation: slideInLeft 1s ease-in-out;
+   
     }
     .nav-link{
       margin-left: 30px;
+    }
+    @keyframes slideInLeft {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(0); }
+    }
+    .nav-link:hover {
+      color: blue;
+      transform: scale(1.1);
     }
      /* Container with background image */
      .bg-img-container {
