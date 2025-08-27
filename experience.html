@@ -1,208 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <style>
-        body {
-  background-color: black; 
-  animation: fadeIn 1s ease-in-out;
-}
-@keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-
-    .navbar-dark .navbar-brand,
-    .navbar-dark .nav-link,
-    .navbar-dark .navbar-toggler .navbar-toggler-icon {
-      font-weight: bold;
-      color: black;
-      padding-left: 10px;
-     
-    }
-  
-
-    .navbar-dark .navbar-brand {
-      margin-left: 60px;
-      animation: slideInLeft 1s ease-in-out;
-   
-    }
-    .nav-link{
-      margin-left: 30px;
-    }
-    @keyframes slideInLeft {
-      0% { transform: translateX(-100%); }
-      100% { transform: translateX(0); }
-    }
-    .nav-link:hover {
-      color: bisque;
-      transform: scale(1.1);
-    }
-    .box {
-  position: relative;
-  width: 95%;
-  height:auto;
-  padding: 20px;
-  background-color: #f0f0f0;
-  border: 3px solid #ccc;
-  border-radius: 5px;
-  animation: slideInUp 1s ease-in-out;
-  
-}
-@keyframes slideInUp {
-      0% { transform: translateY(100%); }
-      100% { transform: translateY(0); }
-    }
-
-.arrow1 {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: goldenrod;
-  transform: rotate(45deg);
-  right: -10px;
-  left: 100%;
-  border: 3px solid #ccc;
-  top:30%;
-  margin-left: -10px;
-}
-.arrow2 {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: goldenrod;
-  transform: rotate(45deg);
-  border: 3px solid #ccc;
-  left: -10px;
-  right: 100%;
-  top:30%;
-  margin-right: -10px;
-}
-
-.content {
-  z-index: 1; 
-}
-
-h3 {
-  margin-top: 0;
-  font-size: 18px;
-  color: #333;
-  padding-left: 30px;
-}
-
-ul {
-  color: #666;
-  font-size: 14px;
-  text-align: justify;
-}
-.box2{
-  margin-top: 190px;
-}
-@media (max-width: 768px) {
-      /* Tablet Mode Styles */
-      .box {
-        width: 90%;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Experience</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-color: #6a0dad;
+        --secondary-color: #0047ab;
+        --light-bg: #f9f9ff;
+        --text-dark: #333;
       }
-      .box2{
-        margin-top: 10px;
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: var(--light-bg);
+        color: var(--text-dark);
       }
+      section#experience {
+        padding: 50px 0;
+      }
+      section#experience h2 {
+        font-weight: bold;
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 15px;
+      }
+      hr {
+        width: 60px;
+        border: 3px solid #6a0dad;
+        margin: 0 auto 30px;
+        border-radius: 10px;
       }
 
-    @media (max-width: 480px) {
-      /* Mobile Mode Styles */
-      .box {
-        width: 100%;
-        margin: 0; 
+      .exp-card {
+        background: #fff;
+        border-radius: 12px;
+        border-left: 6px solid #6a0dad; /* primary color */
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        padding: 20px;
+        height: 100%;
       }
-      .box2{
-        margin-top: 10px;
-      }
-    }
 
-</style>
-</head>
-<body>
-  <header >
-    <nav class="navbar navbar-expand-lg navbar-expand-md fixed-top navbar-dark  p-3" style="background-color: #EB3678">
-     <div class="container-fluid">
-       <p class="navbar-brand" style="font-size: 30px; color: black; font-weight: bolder; text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5), /* Inner glow */
-              0px 2px 5px rgba(0, 0, 0, 0.3); ">Portfolio</p>
-       <button class="navbar-toggler"   type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-         
-         <span class="navbar-toggler-icon" ></span>
-       </button>
-       <div class="collapse navbar-collapse btn-sm" id="navbarNav">
-         <ul class="navbar-nav m-auto " style="font-size: 20px; ">
-           <li class="nav-item">
-             <a class="nav-link" href="index.html">Home</a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link active" aria-current="page" href="experience.html">Experience</a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link" href="project.html">Project</a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link" href="contact.html">Contact</a>
-           </li>
-         </ul>
-       </div>
-     </div>
-   </nav>
- </header>
-  <br>
-  <main style="height: auto;">
-    <div class="container"style="margin-top:50px">
-    <br>
-    <div class="row  m-md-2 p-md-3 py-3 my-1"> 
-      <div class="col-lg-6 col-md-12">
-        <div class="box">
-          <div class="arrow1"></div>
-          <div class="content">
-            <h3>Nofeck Technology (Intern)</h3>
-            <h3>March 2024 - July 2024</h3>
-            <h3>Position : web developer</h3>
-            <br>
-            <ul>
-              <li>Developed and lauched of two websites (melonia & itonlineconsulting). I utilized various languages and tools (e.g., HTML, CSS, Javascript, PHP, Zohosites, Bitrix24) to design and build user-friendly and responsive websites that met client requirements.</li>
-              <li>Troubleshooted and resolved website functionality issues, ensuring optimal performance and user experience.</li>
-              <li>Contributed a CRM form module for TwirlERP software by using Javascript, Php, MySQL & Apache server that streamlined customer data collection, resulting in a 20% reduction in data entry errors.</li>
-              </ul>
-            
+      .exp-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        border-left: 6px solid #0047ab; /* secondary color on hover */
+        background: linear-gradient(
+          90deg,
+          #f0f0ff,
+          #fff
+        ); /* subtle highlight */
+      }
+
+      .exp-card h5 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #6a0dad; /* primary color */
+        margin-bottom: 5px;
+      }
+
+      .exp-card p {
+        font-size: 1rem;
+        color: #333;
+        line-height: 1.5;
+        margin-top: 5px;
+      }
+
+      .exp-card small {
+        color: #0047ab; /* secondary color */
+        font-weight: 500;
+      }
+
+      @media (max-width: 768px) {
+        section#experience h2 {
+          font-size: 2rem;
+        }
+      }
+      footer {
+        background: #212529;
+        color: #fff;
+        padding: 25px 0;
+        text-align: center;
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header"></div>
+    <main>
+      <section id="experience">
+        <div class="container">
+          <div class="text-center">
+            <h2>Professional Experience</h2>
+            <hr />
+          </div>
+          <div class="row g-4">
+            <div class="col-md-12">
+              <div class="exp-card">
+                <div
+                  class="d-flex justify-content-between align-items-center flex-wrap"
+                >
+                  <h5>Junior Full Stack Developer - Avivo, Thanjavur</h5>
+                  <small>Jul 2024 – Present (1 yr 2 mos)</small>
+                </div>
+                <p>
+                  Developing and optimizing
+                  <strong>scalable web applications</strong> with expertise in
+                  <strong>React.js</strong>, <strong>Tailwind CSS</strong>, and
+                  <strong>API integration</strong>. Experienced in designing and
+                  deploying <strong>serverless solutions</strong> using
+                  <strong>AWS Lambda</strong> and <strong>DynamoDB</strong>,
+                  while managing relational data with <strong>MySQL</strong>.
+                  Skilled in implementing
+                  <strong>high-performance architectures</strong>, improving
+                  <strong>application efficiency</strong>, and delivering
+                  <strong>user-centric experiences</strong>.
+                </p>
               </div>
-        </div> 
-      </div>
-      <div class="col-lg-6 col-md-12 box2" >
-        <div class="box">
-          <div class="arrow2"></div>
-          <div class="content">
-            <h3>YHills EduTech Prv.Ltd. (Intern)</h3>
-            <h3>June 2023 - August 2023</h3>
-            <h3>Position : Full stack web developement</h3>
-            <br>
-            <ul>
-              <li>Developed and built interactive webpages using programming languages (HTML, CSS, JavaScript) , and also frameworks and library (jQuery, Bootstrap, React.js)</li>
-              <li>Involved to create a database schema, designing a user-friendly registration form, and storage practices.</li>
-              
-              </ul>
-            
+            </div>
+            <div class="col-md-6">
+              <div class="exp-card">
+                <div
+                  class="d-flex justify-content-between align-items-center flex-wrap"
+                >
+                  <h5>Full Stack Intern - YHills EduTech</h5>
+                  <small>Jun 2023 – Aug 2023</small>
+                </div>
+                <p>
+                  Designed and developed responsive, interactive web pages using
+                  <strong>HTML</strong>, <strong>CSS</strong>,
+                  <strong>JavaScript</strong>, and frameworks like
+                  <strong>React.js</strong> and <strong>Bootstrap</strong>.
+                  Implemented efficient database schema design and built a
+                  user-friendly registration system, enhancing data management
+                  and improving user engagement.
+                </p>
               </div>
-        </div> 
-
-      </div>
-     <!-- <div class="vertical-separator"></div>  -->
-      
-    </div>
-  </div>
-
-
-
-  </main>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
- 
+            </div>
+            <div class="col-md-6">
+              <div class="exp-card">
+                <div
+                  class="d-flex justify-content-between align-items-center flex-wrap"
+                >
+                  <h5>Web Developer Intern - Nofeck Technology</h5>
+                  <small>Mar 2024 – Jun 2024</small>
+                </div>
+                <p>
+                  Developed and launched two client websites (<strong
+                    >Melonia</strong
+                  >
+                  & <strong>ITOnlineConsulting</strong>) using
+                  <strong>HTML</strong>, <strong>CSS</strong>,
+                  <strong>JavaScript</strong>, and <strong>Zohosites</strong>,
+                  ensuring responsiveness and a seamless user experience. Built
+                  and integrated a <strong>CRM form module</strong> for TwirlERP
+                  with <strong>PHP</strong>, <strong>MySQL</strong>, and
+                  <strong>Apache</strong>, streamlining customer data collection
+                  and reducing data entry errors by <strong>20%</strong>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer><p>© 2025 Preethi. All Rights Reserved.</p></footer>
+    <script src="header.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
-  </html>
+</html>
