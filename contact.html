@@ -172,7 +172,7 @@
       <!-- Contact Form -->
       <div class="contact-form">
         <h2>Contact Me</h2>
-        <form class="row g-3">
+        <form id="contactForm" class="row g-3">
           <div class="col-md-6">
             <input
               type="text"
@@ -207,10 +207,39 @@
               placeholder="Message"
             ></textarea>
           </div>
-          <div class="col-12 text-center">
-            <button type="submit">Send</button>
-          </div>
+          <button type="submit">Send</button>
         </form>
+        <script>
+          document
+            .getElementById("contactForm")
+            .addEventListener("submit", async function (e) {
+              e.preventDefault();
+
+              const data = {
+                firstname: this[0].value,
+                secondname: this[1].value,
+                email: this[2].value,
+                phone: this[3].value,
+                message: this[4].value,
+              };
+
+              try {
+                const res = await fetch("http://localhost:3000/contact", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify(data),
+                });
+
+                const result = await res.json();
+                alert(result.message || "Message sent successfully!");
+
+                this.reset();
+              } catch (err) {
+                alert("Something went wrong! Please try again.");
+                console.error(err);
+              }
+            });
+        </script>
       </div>
     </main>
 
